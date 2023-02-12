@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Stream Upload";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-route="UploadFileStream" enctype="multipart/form-data" method="POST">
+    <input type="file" name="file" />
+    <button type="submit">Upload File</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert" style="margin-top:20px">@ViewBag.Message</div>
+}
